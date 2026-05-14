@@ -5,15 +5,22 @@ const Navbar = () => {
         <a>Home</a>
       </li>
       <li className="m-2">
-        <a>About</a>
+        <a>Listed Books</a>
+      </li>
+      <li className="m-2">
+        <a>Pages to Read</a>
       </li>
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-white px-3 md:px-0">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div
+            tabIndex={0}
+            role="button"
+            className="pl-0 btn btn-ghost lg:hidden"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -37,13 +44,18 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="font-bold text-2xl">BookHub</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end gap-3">
+        <button className="btn px-6 bg-[#23BE0A] text-white border-0">
+          Sign In
+        </button>
+        <button className="btn hidden md:block px-6 bg-[#59C6D2] text-white border-0">
+          Sign Up
+        </button>
       </div>
     </div>
   );
