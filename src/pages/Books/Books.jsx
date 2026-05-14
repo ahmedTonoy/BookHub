@@ -1,6 +1,9 @@
 import Book from "../Book/Book";
 
 const Books = ({ booksData }) => {
+  console.log(Array.isArray(booksData));
+  console.log("Type of booksData: ", typeof booksData);
+  console.log(booksData);
   return (
     <div className="my-10 md:my-15 px-3 md:px-0">
       <h1 className="text-center font-bold text-4xl mb-4 md:mb-8">Books</h1>

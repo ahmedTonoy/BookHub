@@ -63,8 +63,10 @@ const BookDetails = () => {
           </div>
         </div>
         <div className="flex mt-3 gap-4 justify-center md:justify-start">
-          <button className="btn btn-soft">Read</button>
-          <button className="btn text-white bg-[#50b1c9]">Wishlist</button>
+          <button className="btn btn-soft">Mark as Read</button>
+          <button className="btn text-white bg-[#50b1c9]">
+            Add to Wishlist
+          </button>
         </div>
       </div>
     </div>

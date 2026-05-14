@@ -29,10 +29,10 @@ const Book = ({ book }) => {
           <p className="font-bold mb-3">By : {author}</p>
           <div className="flex justify-between items-end">
             <p>{category}</p>
-            <div className="flex gap-3 items-end">
+            <div className="flex gap-1 items-end">
               <span>{rating}</span>
               <span>
-                <Star className=""></Star>
+                <Star color="gold" fill="gold"></Star>
               </span>
             </div>
           </div>
