@@ -1,15 +1,38 @@
+import { NavLink } from "react-router";
+
 const Navbar = () => {
   const links = (
     <>
-      <li className="m-2">
-        <a>Home</a>
-      </li>
-      <li className="m-2">
-        <a>Listed Books</a>
-      </li>
-      <li className="m-2">
-        <a>Pages to Read</a>
-      </li>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive
+            ? "m-2 rounded-sm p-1 px-3 text-[#23BE0A] font-bold border border-[#23BE0A]"
+            : "m-2 rounded-sm p-1 px-3 text-black border-none"
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/filter"
+        className={({ isActive }) =>
+          isActive
+            ? "m-2 rounded-sm p-1 px-2 text-[#23BE0A] font-bold border border-[#23BE0A]"
+            : "m-2 rounded-sm p-1 px-2 text-black border-none"
+        }
+      >
+        Listed Books
+      </NavLink>
+      <NavLink
+        to="/meter"
+        className={({ isActive }) =>
+          isActive
+            ? "m-2 rounded-sm p-1 px-2 text-[#23BE0A] font-bold border border-[#23BE0A]"
+            : "m-2 rounded-sm p-1 px-2 text-black border-none"
+        }
+      >
+        Pages to Read
+      </NavLink>
     </>
   );
   return (
