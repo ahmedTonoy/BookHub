@@ -58,7 +58,7 @@ const FilteredBook = ({ book }) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-row justify-between md:justify-start items-center gap-3 md:gap-6 pt-3 md:pt-5 border-t border-t-[#13131326] text-[#131313b3]">
+        <div className="flex justify-between md:justify-start items-center gap-3 md:gap-6 pt-3 md:pt-5 border-t border-t-[#13131326] text-[#131313b3]">
           <p className="badge badge-outline p-6 rounded-full bg-[#328eff1a] text-lg border-0 text-[#328EFF]">
             <span className="hidden md:block">Category:</span>{" "}
             <span className="font-medium">{category}</span>
@@ -66,11 +66,13 @@ const FilteredBook = ({ book }) => {
           <p className="badge badge-outline p-6 rounded-full bg-[#ffac331a] text-lg border-0 text-[#ffac33]">
             Rating: <span className="font-medium">{rating}</span>
           </p>
-          <Link to={`/bookDetails/${bookId}`}>
-            <button className="btn hidden md:block rounded-full font-medium text-lg p-6 bg-[#23BE0A] text-white border-0">
-              View Details
-            </button>
-          </Link>
+          <div className="hidden md:flex">
+            <Link to={`/bookDetails/${bookId}`}>
+              <button className="btn rounded-full font-medium text-lg p-6 bg-[#23BE0A] text-white border-0">
+                View Details
+              </button>
+            </Link>
+          </div>
         </div>
         <Link to={`/bookDetails/${bookId}`}>
           <button className="btn md:hidden mt-4 w-full md:w-fit rounded-full font-medium text-lg p-6 bg-[#23BE0A] text-white border-0">
