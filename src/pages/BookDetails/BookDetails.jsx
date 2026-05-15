@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router";
+import { setLsData } from "../../utils/addToLs";
 
 const BookDetails = () => {
   const bookList = useLoaderData();
@@ -17,6 +18,10 @@ const BookDetails = () => {
     publisher,
     totalPages,
   } = targetBook;
+
+  const handleAddToList = (bookId, bookName, listName) => {
+    setLsData(bookId, bookName, listName);
+  };
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 my-5 md:my-8">
@@ -63,8 +68,16 @@ const BookDetails = () => {
           </div>
         </div>
         <div className="flex mt-3 gap-4 justify-center md:justify-start">
-          <button className="btn btn-soft">Mark as Read</button>
-          <button className="btn text-white bg-[#50b1c9]">
+          <button
+            onClick={() => handleAddToList(bookId, bookName, "read")}
+            className="btn btn-soft"
+          >
+            Mark as Read
+          </button>
+          <button
+            onClick={() => handleAddToList(bookId, bookName, "wish")}
+            className="btn text-white bg-[#50b1c9]"
+          >
             Add to Wishlist
           </button>
         </div>

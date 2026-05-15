@@ -20,6 +20,8 @@ export const router = createBrowserRouter([
       },
       {
         path: "/filter",
+        loader: () => fetch("/booksData.json"),
+        HydrateFallback: LoadingSpinner,
         Component: ListedBooks,
       },
       {
