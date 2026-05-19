@@ -32,7 +32,7 @@ const ListedBooks = () => {
   }
   return (
     <div>
-      <h1 className="bg-[#f3f3f3] py-8 text-2xl font-bold flex items-center justify-center mt-2">
+      <h1 className="bg-[#f3f3f3] py-8 rounded-2xl text-2xl font-bold flex items-center justify-center mt-2">
         Books
       </h1>
       <div className="mt-8 mb-10 flex justify-center">
