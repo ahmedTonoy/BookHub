@@ -42,7 +42,10 @@ export default function CustomizeBarShapes({ data }) {
   const isMobile = window.innerWidth < 640;
   return (
     <div style={{ overflowX: "auto" }}>
-      <div style={{ minWidth: data.length * 60 }}>
+      <div
+        className=""
+        style={{ minWidth: isMobile ? data.length * 60 : data.length * 100 }}
+      >
         <ResponsiveContainer width="100%" height={400}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" />
