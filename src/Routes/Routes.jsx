@@ -15,25 +15,25 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("booksData.json"),
+        loader: () => fetch("/booksData.json"),
         HydrateFallback: LoadingSpinner,
         Component: Home,
       },
       {
         path: "filter",
-        loader: () => fetch("booksData.json"),
+        loader: () => fetch("/booksData.json"),
         HydrateFallback: LoadingSpinner,
         Component: ListedBooks,
       },
       {
         path: "bookDetails/:id",
-        loader: () => fetch("booksData.json"),
+        loader: () => fetch("/booksData.json"),
         HydrateFallback: LoadingSpinner,
         Component: BookDetails,
       },
       {
         path: "meter",
-        loader: () => fetch("booksData.json"),
+        loader: () => fetch("/booksData.json"),
         HydrateFallback: LoadingSpinner,
         Component: PageStates,
       },
